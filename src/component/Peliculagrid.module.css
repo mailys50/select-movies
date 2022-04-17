@@ -1,0 +1,19 @@
+.peliculagrid{
+    /* decir que el ul es un grid */
+    display: grid;
+    /* crear columnas columnas que va a tener */
+    grid-template-columns: repeat(auto-fill, 230px);
+    /* separación entre las tarjetas */
+    gap: 40px;
+/* separacion entre los bordes */
+    padding: 40px;
+/* justificar al centro */
+    justify-content: center;
+
+}
+@media(max-width: 560px){
+    .peliculagrid{
+        grid-template-columns: 100%;
+        
+    }  
+}

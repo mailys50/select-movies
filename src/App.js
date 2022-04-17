@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import PeliculaDetails from './pages/PeliculaDetails';
+import { BrowserRouter, Link, Route,Routes } from "react-router-dom";
+import styles from "./App.module.css"
+import HomePelicula from './pages/HomePelicula';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <BrowserRouter>
+    <Routes>
+ 
+      <Route path="/" element={ 
+        <Link to= "/home"><h1 className={styles.title}>Películas</h1></Link>
+    
+      }/> 
+    
+      <Route path="/home" element={ <HomePelicula />}/> 
+      <Route path="/pelicula" element={ <PeliculaDetails />}/> 
+
+    
+    </Routes>
+  </BrowserRouter>
+  
+      
+   
+  )
 }
 
-export default App;
+export default App
+
+

@@ -1,0 +1,25 @@
+.tarjeta{
+    /* //eliminar puntos del li */
+    list-style: none;
+    /* tamaño de fuente o letra */
+    font-size: 1.5rem;
+    text-align: center;
+}
+.imagen:hover {
+
+    opacity:0.8;
+}
+.imagen{
+    /* borde redondeado */
+    border-radius: 10px;
+    background-color: azure;
+}
+.title{
+    color: aqua;
+}
+@media(max-width: 560px){
+    .imagen{
+        width: 100%;
+        height: auto;
+    }  
+}
